@@ -1,0 +1,59 @@
+### POST data to the toys table
+
+POST http://localhost:3000/toys
+Content-Type: application/json
+
+{
+  "name": "Family Board Game",
+  "category": "Board Games",
+  "ageRec": "6+",
+  "details": "Interactive board game for the whole family",
+  "usedFor": "Family bonding and entertainment",
+  "location": "Toy Store",
+  "photos": "family_board_game.jpg"
+}
+
+### Get data from the db:
+
+GET http://localhost:3000/toys
+
+
+#-------------- For User --------------#
+
+### POST data to the users table
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "sam@email.com",
+  "password": "sam1234Pass",
+  "number": "8765432109"
+}
+
+### Check for login
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "email": "asdf",
+  "password": "asdf"
+}
+
+### Get data from users table
+GET http://localhost:3000/users
+
+
+### Get toy from ID:
+
+GET http://localhost:3000/toys/2
+
+
+### Get toy from user id:
+
+GET http://localhost:3000/toys/user/-1
+
+
+### Delete toy from id:
+
+DELETE http://localhost:3000/toys/delete/19
+
